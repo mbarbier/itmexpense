@@ -1,0 +1,6 @@
+name: itmexpense
+description: A sample web application
+dependencies:
+  browser: any
+  bootjack: any
+  event_bus: any
