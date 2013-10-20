@@ -1,4 +1,4 @@
-library ui;
+library b;
 
 import 'dart:html';
 

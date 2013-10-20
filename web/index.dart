@@ -19,7 +19,7 @@ void main() {
     modal.bj.show();
     });
   
-  Element container = new Element.html("<div class=\"wrapper\"></div>");
+  Element container = new Element.html("<div id=\"wrapper\" class=\"wrapper\"></div>");
   Row r1 = new Row();
   DivElement c1_1 = r1.addCol(md: 6);
   DivElement c1_2 = r1.addCol(md: 6);

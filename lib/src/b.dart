@@ -1,4 +1,4 @@
-part of ui;
+part of b;
 
 class B  {
   
