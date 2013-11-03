@@ -3,4 +3,4 @@ library events;
 import 'package:event_bus/event_bus.dart';
 import 'model.dart';
 
-part 'src/events.dart';
+part 'event/events.dart';

@@ -1,3 +1,3 @@
 library model;
 
-part 'src/model.dart';
+part 'model/model.dart';

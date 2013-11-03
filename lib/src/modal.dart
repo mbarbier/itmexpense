@@ -20,7 +20,6 @@ class Modal {
     _content = new DivElement();
     _header = new DivElement();
     _body = new DivElement();
-    _footer = new DivElement();
     
     _close = new Element.html("<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>", treeSanitizer : B.treeSanitizer);
     _title = new Element.tag("h4");
@@ -33,13 +32,11 @@ class Modal {
     _content.classes.add("modal-content");
     _header.classes.add("modal-header");
     _body.classes.add("modal-body");
-    _footer.classes.add("modal-footer");
     
     _modal.append(_dialog);
     _dialog.append(_content);
     _content.append(_header);
     _content.append(_body);
-    _content.append(_footer);
     
     _header.append(_close);
     _header.append(_title);
@@ -54,7 +51,14 @@ class Modal {
     _body.append(e);
   }
   addToFooter(Element e) {
+    if(_footer==null) _buildFooter();
     _footer.append(e);
+  }
+  
+  _buildFooter() {
+    _footer = new DivElement();
+    _footer.classes.add("modal-footer");
+    _content.append(_footer);
   }
   
   Element get element => _modal;

@@ -30,7 +30,12 @@ class B  {
     
     return m;
   }
+ 
   
+  static pullr(Element e) {
+    e.classes.add("pull-right");
+    return e;
+  }
 }
 
 class NullTreeSanitizer implements NodeTreeSanitizer {

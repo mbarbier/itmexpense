@@ -2,8 +2,12 @@ part of b;
 
 class Navbar {
   
+  static text(Element e) {e.classes.add("navbar-text"); return e; }
+  static leftAlign(Element e)  {e.classes.add("navbar-left"); return e;}
+  static rightAlign(Element e)  {e.classes.add("navbar-right"); return e;}
+  static brand(Element e) {e.classes.add("navbar-brand"); return e;}
+
   Element element;
-  DivElement header;
   
   Navbar() {
     element = new Element.tag("nav")
@@ -14,14 +18,13 @@ class Navbar {
   inverse() => element.classes.add("navbar-inverse");
   staticTop() => element.classes.add("navbar-static-top");
   
-  text(Element e) => e.classes.add("navbar-text");
-  leftAlign(Element e) => e.classes.add("navbar-left");
-  rightAlign(Element e) => e.classes.add("navbar-right");
 
-  brand(Element e) => e.classes.add("navbar-brand");
+  append(Element e) => element.append(e);
   
-  withHeader() {
-    header = new DivElement()
+  DivElement addHeader() {
+    DivElement header = new DivElement()
       ..classes.add("navbar-header");
+    element.append(header);
+    return header;
   }
 }
